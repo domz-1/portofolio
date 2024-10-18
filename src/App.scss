@@ -142,14 +142,16 @@ a{
             // font-size: 36px;
         }
     }
-    .social{
+}
+
+.social{
     margin: 50px 0px;
+    display: flex;
+    flex-direction: row !important;
     a{
         padding: 5px;
     }
-    }
 }
-
 .title{
     margin: 0;
     display: flex;
@@ -258,6 +260,14 @@ a{
                 padding: 0;
             }
         }
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // flex-direction: column;
 }
 .Contact{
     display: flex;

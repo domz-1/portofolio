@@ -6,14 +6,15 @@ import {
   IconButton,
   Chip,
   Box,
-  ButtonGroup
+  ButtonGroup,
+  Card
 } from "@mui/material";
 import LinkIcon from '@mui/icons-material/Link';
 import { GitHub } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import lightTheme from "../themes/lightTheme";
 import darkTheme from "../themes/darkTheme";
-import AnimatedCard, { AnimatedCardProps } from "./AnimatedCard";
+import { motion } from "framer-motion";
 
 export interface IProjectCardProps {
   ImgSrc: string;
@@ -30,26 +31,31 @@ interface IState {
     darkMode: boolean;
   };
 }
-
-const ProjectCard: React.FC<IProjectCardProps> = (props) => {
+const ProjectCard = (props : IProjectCardProps ) => {
+  
   const darkMode = useSelector<IState, boolean>((state) => state.theme.darkMode);
   const theme = darkMode ? darkTheme : lightTheme;
-
-  const cardAnimationProps: AnimatedCardProps['animationProps'] = {
-    initial: props.imgPosition === "right" 
-      ? { opacity: 0, x: 1000 } 
+  const cardAnimationProps = {
+    initial: props.imgPosition === "right"
+      ? { opacity: 0, x: 1000 }
       : { opacity: 0, x: -1000 },
     whileInView: { opacity: 1, x: 0 },
+    whileHover:{ scale:1.008},
     viewport: { once: true, amount: 0.1 },
     transition: {
-      duration: 0.1,
+      duration: 0.2,
       ease: "linear"
     }
   };
+  
 
   return (
-    <AnimatedCard
-      animationProps={cardAnimationProps}
+
+    <motion.div
+      {...cardAnimationProps}
+      className='card'
+    >
+    <Card
       className="project-card"
       sx={{
         position: "relative",
@@ -141,7 +147,8 @@ const ProjectCard: React.FC<IProjectCardProps> = (props) => {
           </IconButton>
         </ButtonGroup>
       </CardContent>
-    </AnimatedCard>
+    </Card>
+    </motion.div>
   );
 };
 
