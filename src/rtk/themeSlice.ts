@@ -15,7 +15,6 @@
         toggleTheme: (state) => {
         state.darkMode = !state.darkMode;
         localStorage.setItem('theme', state.darkMode ? 'dark' : 'light');
-        console.log('Current theme mode:', state.darkMode ? 'dark' : 'light');
         },
     },
     });

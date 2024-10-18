@@ -3,9 +3,11 @@
 import AboutText from '../components/AboutText';
 import Picture from '../components/Picture';
 import PicTwo from '../assets/pic-2.png'
+// import { useEffect } from 'react';
 
 
     const About = () => {
+
     return (
         <>
         <AltStack className='' id='about'  >

@@ -19,9 +19,6 @@ function ThemeWrapper(): JSX.Element {
   const darkMode = useSelector((state: IState) => state.theme.darkMode); // Access theme state from Redux
   const theme = darkMode ? darkTheme : lightTheme;
 
-  useEffect(() => {
-    console.log("Current theme mode:", darkMode ? 'dark' : 'light');
-  }, [darkMode]);
 
   return (
     <ThemeProvider theme={theme}>

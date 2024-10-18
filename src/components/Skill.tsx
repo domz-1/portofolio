@@ -11,7 +11,9 @@ export default function Skill (props: ISkillProps) {
     <motion.div className="skill"
     initial={{ scale: 0.8 }}
     whileInView={{ scale: 1 }}
-    transition={{ duration: 0.3 ,delay:.2 }}
+    transition={{ duration: 0.3 ,
+      ease: "linear"
+     }}
     whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}>
     <img src={props.src} alt={props.name} />
       <Typography>{props.name}</Typography>

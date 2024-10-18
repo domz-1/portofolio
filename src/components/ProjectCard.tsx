@@ -36,8 +36,8 @@ const ProjectCard = (props : IProjectCardProps ) => {
   const theme = darkMode ? darkTheme : lightTheme;
   const cardAnimationProps = {
     initial: props.imgPosition === "right"
-      ? { opacity: 0, x: 1000 }
-      : { opacity: 0, x: -1000 },
+      ? { opacity: 0, x: 100 }
+      : { opacity: 0, x: -100 },
     whileInView: { opacity: 1, x: 0 },
     whileHover:{ scale:1.008},
     viewport: { once: true, amount: 0.1 },

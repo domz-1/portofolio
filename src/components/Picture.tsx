@@ -25,9 +25,9 @@ return (
         animate={{ 
             y: [0, -10, 0, 10, 0],
             transition: {
-            duration: 2,
+            duration: 1.5,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "linear"
             }
         }}
         viewport={{

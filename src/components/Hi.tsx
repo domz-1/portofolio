@@ -23,7 +23,6 @@ const charVariant = {
   },
 };
 
-// Define the text content
 const textOne = `Hi, I'm Adham 👋`;
 const textTwo = `I'm a front-end developer with a passion for building fast, accessible, and visually stunning web applications. I love crafting responsive digital experiences that feel intuitive and look beautiful. My passion for the craft continues to grow every day.`;
 const textThree = `📍 Egypt`;
@@ -31,13 +30,15 @@ const textFour = `🟢 Available for new projects`;
 
 // Reusable component for animated text
 const AnimatedText = ({ text }: { text: string }) => (
-  <motion.div variants={containerVariant} initial="hidden" animate="visible">
-    {text.split("").map((char: string, index: number) => (
-      <motion.span key={char + index} variants={charVariant}>
-        {char}
-      </motion.span>
-    ))}
-  </motion.div>
+  <span>
+    <motion.div variants={containerVariant} initial="hidden" animate="visible">
+      {text.split("").map((char: string, index: number) => (
+        <motion.span key={char + index} variants={charVariant}>
+          {char}
+        </motion.span>
+      ))}
+    </motion.div>
+  </span>
 );
 
 export default function Hi() {
@@ -67,8 +68,13 @@ export default function Hi() {
           lineHeight: 1.5,
         }}
       >
+        <div>
+
         <AnimatedText text={textThree} />
-        <AnimatedText text={textFour} />
+        </div>
+        <div>
+        <AnimatedText   text={textFour} />
+        </div>
       </Typography>
       <Social />
     </Stack>

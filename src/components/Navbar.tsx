@@ -10,6 +10,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import DownloadIcon from '@mui/icons-material/Download';
 import cvUrl from '../assets/Cv.pdf'
+import { Call } from '@mui/icons-material';
 
 interface IState{
   theme: {
@@ -48,8 +49,8 @@ export default function NavBar() {
 <List>
   {[
     { text: 'About', icon: <InfoIcon /> },
-    { text: 'Skills', icon: <WorkIcon /> },
-    { text: 'Work', icon: <DownloadIcon /> },
+    { text: 'Skills', icon: <Call/> },
+    { text: 'Work', icon:<WorkIcon /> },
     { text: 'Contact', icon: <ContactMailIcon /> },
   ].map((item) => (
     <ListItem
