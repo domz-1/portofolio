@@ -40,7 +40,7 @@ const ProjectCard = (props : IProjectCardProps ) => {
       : { opacity: 0, x: -100 },
     whileInView: { opacity: 1, x: 0 },
     whileHover:{ scale:1.008},
-    viewport: { once: true, amount: 0.1 },
+    viewport: { once: true, amount: 0.3 },
     transition: {
       duration: 0.2,
       ease: "linear"
