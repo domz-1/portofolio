@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
 }
-.App{
+html{
     overflow-y: scroll !important;
 }
 
@@ -12,7 +12,7 @@ a{
     text-decoration: none !important;
 }
 ::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 @mixin xs {
     @media (max-width: 599px) { @content; }
