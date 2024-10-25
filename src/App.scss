@@ -4,7 +4,10 @@
     box-sizing: border-box;
     overflow: hidden !important;
 }
-
+body{
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
 a{
     text-decoration: none !important;
 }
